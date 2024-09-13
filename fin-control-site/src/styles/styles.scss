@@ -3,3 +3,13 @@
 
 @import './vendor/normalize';
 @import './global/variables';
+
+//Blocks
+//-----------------
+@import './blocks/company-info';
+@import './blocks/contact-button';
+@import './blocks/menu-info';
+
+//Pages
+//-----------------
+@import './pages/main-page';
