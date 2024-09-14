@@ -2,12 +2,14 @@
 //-----------------
 
 @import './vendor/normalize';
+@import './global/mixins';
 @import './global/variables';
 
 //Blocks
 //-----------------
 @import './blocks/company-info';
 @import './blocks/contact-button';
+@import './blocks/header-info';
 @import './blocks/menu-info';
 
 //Pages

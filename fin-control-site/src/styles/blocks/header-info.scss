@@ -1,0 +1,71 @@
+.header-info {
+  @include default-flex-centered;
+  justify-content: space-between;
+  height: 60px;
+  padding: 10px 15px 10px 30px;
+  background-color: $color-white;
+  border-radius: 20px;
+
+  &_left-part,
+  &_right-part {
+    @include default-flex-centered;
+  }
+
+  &_left-part {
+    font-size: 18px;
+  }
+
+  &_right-part {
+    gap: 8px;
+  }
+
+  &__user {
+    @include default-flex-centered;
+
+    span {
+      padding-left: 5px;
+      font-size: 20px;
+    }
+  }
+
+  &__calendar {
+    @include default-flex-centered;
+    margin-left: 36px;
+    padding: 22px 20px;
+    background-color: $color-alice-blue;
+    color: $color-dodger-blue;
+    border-radius: 22px;
+
+    span {
+      margin-left: 16px;
+      font-size: 20px;
+    }
+  }
+
+  .about-btn {
+    @include default-flex-centered;
+    padding: 10px 12px;
+    background-color: $color-pumpkin;
+    border: 1px solid $color-white;
+    border-radius: 20px;
+    color: $color-white;
+    text-align: center;
+
+    .anticon.anticon-arrow-right {
+      margin-left: 8px;
+      width: 8px;
+    }
+  }
+
+  .exit-btn {
+    padding: 10px 16px;
+    background: none;
+    border: 1px solid $color-black-russian;
+    border-radius: 20px;
+  }
+
+  &__button:hover {
+    cursor: pointer;
+    background-color: desaturate($color: $color-dodger-blue, $amount: 70);
+  }
+}

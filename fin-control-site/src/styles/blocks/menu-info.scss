@@ -1,6 +1,5 @@
 .menu-info {
-  display: flex;
-  flex-direction: column;
+  @include default-flex-vertical;
   width: 366px;
   min-height: 60px;
   padding: 28px 10px 10px 10px;
@@ -10,7 +9,11 @@
   background-color: $color-black-russian;
 
   &__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 18px;
   }
@@ -52,6 +55,8 @@
       .ant-menu-submenu-title {
         height: 66px;
         padding: 10px !important;
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
         align-items: baseline;
         font-size: 20px;
         color: $color-white;

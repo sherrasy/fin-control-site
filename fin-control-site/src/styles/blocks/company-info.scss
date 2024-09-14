@@ -1,6 +1,5 @@
 .company-info {
-  display: flex;
-  flex-direction: column;
+  @include default-flex-vertical;
   width: 330px;
   height: 320px;
   padding: 28px;
@@ -10,14 +9,17 @@
   background-color: $color-black-russian;
 
   &__links-block {
-    display: flex;
-    flex-direction: column;
+    @include default-flex-vertical;
 
     .info-link {
       font-size: 14px;
       text-decoration: none;
       color: $color-waikawa-grey;
       padding: 10px 0;
+    }
+
+    .info-link:hover {
+      background-color: $color-bunting;
     }
 
     .info-link:not(:last-child) {
@@ -37,13 +39,18 @@
   }
 
   &__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
     column-gap: 20px;
 
     .custom-input {
-      display: flex;
-      flex-direction: column;
+      @include default-flex-vertical;
+
       width: 150px;
       margin-bottom: 24px;
 

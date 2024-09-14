@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+
+<defs>
+</defs>
+<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+	<rect x="0" y="13.48" rx="0" ry="0" width="90" height="10.36" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(41, 126, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) "/>
+	<path d="M 11.951 5.629 v 10.576 c 0 2.074 1.681 3.756 3.756 3.756 s 3.756 -1.681 3.756 -3.756 V 5.629 H 11.951 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(41, 126, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+	<path d="M 41.244 5.629 v 10.576 c 0 2.074 1.681 3.756 3.756 3.756 s 3.756 -1.681 3.756 -3.756 V 5.629 H 41.244 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(41, 126, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+	<path d="M 70.536 5.629 v 10.576 c 0 2.074 1.681 3.756 3.756 3.756 c 2.074 0 3.756 -1.681 3.756 -3.756 V 5.629 H 70.536 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(41, 126, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+	<path d="M 0 31.371 v 53.258 h 90 V 31.371 H 0 z M 24.635 74.635 h -11.27 v -11.27 h 11.27 V 74.635 z M 24.635 52.635 h -11.27 v -11.27 h 11.27 V 52.635 z M 50.635 74.635 h -11.27 v -11.27 h 11.27 V 74.635 z M 50.635 52.635 h -11.27 v -11.27 h 11.27 V 52.635 z M 76.635 74.635 h -11.27 v -11.27 h 11.27 V 74.635 z M 76.635 52.635 h -11.27 v -11.27 h 11.27 V 52.635 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill:rgb(41, 126, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+</g>
+</svg>

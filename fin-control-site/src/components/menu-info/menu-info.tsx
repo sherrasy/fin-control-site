@@ -1,6 +1,6 @@
 import { Menu, MenuProps } from 'antd';
 import { useState } from 'react';
-import { DownOutlined,CloseOutlined,SettingFilled,EditFilled, BookFilled, FileTextFilled  } from "@ant-design/icons";
+import { DownOutlined,CloseOutlined,SettingFilled,EditFilled, ReadFilled, FileTextFilled  } from "@ant-design/icons";
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -27,7 +27,7 @@ function MenuInfo(): JSX.Element {
     {
       key: 'database',
       label: 'База знаний',
-      icon:<BookFilled />,
+      icon:<ReadFilled />,
       children: [{ key: 'd1', label: 'База знаний' }],
     }
   ];
