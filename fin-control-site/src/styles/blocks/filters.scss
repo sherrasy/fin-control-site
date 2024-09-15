@@ -1,0 +1,135 @@
+.filters {
+  margin-top: 36px;
+
+  &__heading {
+    @include default-flex-centered;
+    gap: 22px;
+  }
+
+  &__title {
+    font-size: 32px;
+    word-spacing: 4px;
+  }
+
+  &__info-btn {
+    padding: 20px 12px;
+    border-radius: 20px;
+    background-color: $color-black-russian;
+    font-size: 16px;
+    .ant-btn-icon {
+      margin-right: 5px;
+    }
+  }
+
+  &__form {
+    @include default-flex-centered;
+    height: 60px;
+    margin-top: 26px;
+    gap: 10px;
+  }
+
+  &__controls {
+    @include default-flex-centered;
+    margin-top: 6px;
+    gap: 4px;
+  }
+}
+
+.filters-form {
+  &__item {
+    background-color: $color-white;
+    padding: 10px;
+    border-radius: 22px;
+
+    .ant-row {
+      align-items: center;
+    }
+
+    .ant-form-item-label label {
+      font-size: 18px;
+      transform: scaleX(0.9);
+    }
+
+    .ant-form-item-label label::after {
+      content: '';
+    }
+
+    .custom-input {
+      font-size: 16px;
+      border-radius: 22px;
+      border: none;
+      background-color: $color-solitude;
+      text-align: center;
+    }
+  }
+
+  &__item:first-child {
+    width: 276px;
+
+    .custom-input {
+      padding: 8px 10px;
+      margin-left: 4px;
+      min-width: 180px;
+    }
+  }
+
+  &__item:nth-child(2) {
+    width: 276px;
+
+    .custom-input {
+      padding: 14px;
+      min-width: 174px;
+    }
+  }
+
+  &__item:nth-child(3) {
+    max-width: 150px;
+    .custom-input {
+      border-radius: 16px;
+      padding: 12px 6px;
+    }
+  }
+
+  &__item:nth-child(4) {
+    width: 120px;
+    height: 70px;
+    padding: 6px;
+    max-width: fit-content;
+
+    .ant-row {
+      @include default-flex-vertical;
+      align-items: flex-start;
+    }
+
+    .ant-form-item-label label {
+      max-height: 30px;
+      transform: scaleX(0.9);
+    }
+
+    .ant-form-item-control-input-content {
+      width: 120px;
+      max-width: fit-content;
+    }
+
+    .custom-select {
+      .ant-select-selector {
+        font-size: 18px;
+        border: none;
+        border-radius: 16px;
+        padding: 0 11px 0 6px;
+      }
+    }
+  }
+}
+
+.filter-controls {
+  &__submit,
+  &__export {
+    padding: 24px 18px;
+    border-radius: 26px;
+    font-size: 16px;
+  }
+  &__export {
+    background-color: $color-black-russian;
+  }
+}
