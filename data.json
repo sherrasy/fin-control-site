@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "barcode": 2037618545904,
+      "category": "jeans",
+      "part_number": "ДжинсыЖ",
+      "size": "50",
+      "stock": 0,
+      "delivery": 40,
+      "amount": 30
+    },
+    {
+      "id": 2,
+      "barcode": 2307618545903,
+      "category": "shirt",
+      "part_number": "РубашкаЖ",
+      "size": "52",
+      "stock": 6,
+      "delivery": 32,
+      "amount": 4
+    },
+    {
+      "id": 3,
+      "barcode": 2037600000000,
+      "category": "cardigan",
+      "part_number": "Кардиган",
+      "size": "50-54",
+      "stock": 25,
+      "delivery": 50,
+      "amount": 2
+    },
+    {
+      "id": 4,
+      "barcode": 2027611111111,
+      "category": "trousers",
+      "part_number": "Брюки",
+      "size": "58",
+      "stock": 18,
+      "delivery": 3,
+      "amount": 27
+    },
+    {
+      "id": 5,
+      "barcode": 2124644444444,
+      "category": "shoes",
+      "part_number": "Обувь",
+      "size": "52",
+      "stock": 3,
+      "delivery": 5,
+      "amount": 8
+    },
+    {
+      "id": 6,
+      "barcode": 2637666666666,
+      "category": "jeans",
+      "part_number": "Джинсы",
+      "size": "42",
+      "stock": 46,
+      "delivery": 7,
+      "amount": 33
+    },
+    {
+      "id": 7,
+      "barcode": 2037618545904,
+      "category": "jeans",
+      "part_number": "ДжинсыМ",
+      "size": "46",
+      "stock": 10,
+      "delivery": 18,
+      "amount": 28
+    },
+    {
+      "id": 8,
+      "barcode": 2037618545904,
+      "category": "cardigan",
+      "part_number": "Кардиган",
+      "size": "48",
+      "stock": 13,
+      "delivery": 23,
+      "amount": 36
+    },
+    {
+      "id": 9,
+      "barcode": 2037618545904,
+      "category": "jeans",
+      "part_number": "ДжинсыМ",
+      "size": "54",
+      "stock": 22,
+      "delivery": 26,
+      "amount": 48
+    },
+    {
+      "id": 10,
+      "barcode": 2037618545904,
+      "category": "shirt",
+      "part_number": "РубашкаМ",
+      "size": "60",
+      "stock": 2,
+      "delivery": 36,
+      "amount": 38
+    }
+  ]
+}

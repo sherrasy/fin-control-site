@@ -21,3 +21,10 @@ export const CategoryName = {
     jeans: 'Джинсы',
     shoes: 'Обувь',
   } as const;
+
+  export const REDUCER_NAME = 'ITEMS'
+
+  export const ApiActionName = {
+    FetchItems: 'fetch-items',
+    EditItem: 'edit-item',
+  } as const;

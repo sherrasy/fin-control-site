@@ -4,6 +4,9 @@ import { CategoryName } from "@utils/constant";
 
 function Filters(): JSX.Element {
     const date = '01.04.2023';
+    const initialValues = {
+        category:CategoryName.jeans
+    }
     return (
         <div className='filters'>
             <div className="filters__heading">
@@ -11,7 +14,7 @@ function Filters(): JSX.Element {
                 <Button type='primary' icon={<ReadFilled />} className="filters__info-btn">Инструкции</Button>
             </div>
             <div className="filters__container">
-                <Form className="filters__form filters-form" autoComplete="off">
+                <Form initialValues={initialValues} className="filters__form filters-form" autoComplete="off">
                     <Form.Item label="Баркод" name='barcode' className="filters-form__item">
                         <InputNumber controls={false} placeholder="5643242134323099" className="custom-input input-barcode"/>
                     </Form.Item>
@@ -22,7 +25,7 @@ function Filters(): JSX.Element {
                         <Input placeholder="44" className="custom-input input-size"/>
                     </Form.Item>
                     <Form.Item label="Категория" name='category' className="filters-form__item">
-                        <Select  defaultValue={CategoryName.jeans} className="custom-select">
+                        <Select className="custom-select">
                             {Object.entries(CategoryName).map(([key, value]) => <Select.Option key={key} value={key}>{value}</Select.Option>)}
                         </Select>
                     </Form.Item>
