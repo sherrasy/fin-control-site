@@ -1,0 +1,82 @@
+.menu-info {
+  @include default-flex-vertical;
+  width: 366px;
+  min-height: 60px;
+  padding: 28px 10px 10px 10px;
+  margin-bottom: 4px;
+  border-radius: 25px;
+  color: $color-white;
+  background-color: $color-black-russian;
+
+  &__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 18px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+
+    span {
+      font-size: 22px;
+      padding: 3px 5px;
+      border-radius: 3px;
+      background-color: $color-dodger-blue;
+    }
+  }
+
+  &__toggle {
+    width: 80px;
+    height: 28px;
+    border: none;
+    border-radius: 15px;
+    font-size: 14px;
+    color: $color-waikawa-grey;
+    background-color: $color-bunting;
+  }
+
+  &__menu {
+    ul.ant-menu.ant-menu-sub.ant-menu-inline,
+    &:where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light,
+    &:where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light > .ant-menu {
+      background-color: transparent;
+    }
+
+    .ant-menu-submenu.ant-menu-submenu-inline {
+      margin-bottom: 4px;
+      background-color: $color-bunting;
+
+      .ant-menu-submenu-title {
+        height: 66px;
+        padding: 10px !important;
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+        font-size: 20px;
+        color: $color-white;
+        border-radius: 0;
+
+        .ant-menu-item-icon {
+          font-size: 20px;
+          margin-right: 4px;
+          color: $color-white;
+        }
+      }
+
+      .ant-menu-item {
+        border-top: 2px solid $color-black-russian;
+        border-radius: 0;
+
+        .ant-menu-title-content {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

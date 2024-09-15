@@ -1,0 +1,19 @@
+// Global
+//-----------------
+
+@import './vendor/normalize';
+@import './global/mixins';
+@import './global/variables';
+
+//Blocks
+//-----------------
+@import './blocks/company-info';
+@import './blocks/contact-button';
+@import './blocks/filters';
+@import './blocks/header-info';
+@import './blocks/menu-info';
+@import './blocks/table';
+
+//Pages
+//-----------------
+@import './pages/main-page';

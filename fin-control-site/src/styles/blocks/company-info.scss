@@ -1,0 +1,74 @@
+.company-info {
+  @include default-flex-vertical;
+  width: 330px;
+  height: 320px;
+  padding: 28px;
+  margin-bottom: 5px;
+  border-radius: 25px;
+  color: $color-white;
+  background-color: $color-black-russian;
+
+  &__links-block {
+    @include default-flex-vertical;
+
+    .info-link {
+      font-size: 14px;
+      text-decoration: none;
+      color: $color-waikawa-grey;
+      padding: 10px 0;
+    }
+
+    .info-link:hover {
+      background-color: $color-bunting;
+    }
+
+    .info-link:not(:last-child) {
+      border-bottom: 1px solid $color-bunting;
+    }
+  }
+}
+
+.contacts-block {
+  margin-bottom: 5px;
+
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 36px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+
+    .custom-input {
+      @include default-flex-vertical;
+
+      width: 150px;
+      margin-bottom: 24px;
+
+      label {
+        margin-bottom: 4px;
+        font-size: 12px;
+        color: $color-waikawa-grey;
+      }
+
+      input {
+        border: none;
+        background-color: $color-black-russian;
+        color: $color-white;
+      }
+
+      + .input-time {
+        width: 400px;
+      }
+    }
+  }
+}

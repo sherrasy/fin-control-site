@@ -1,0 +1,36 @@
+.table {
+  margin-top: 30px;
+
+  .ant-btn-text {
+    font-size: 18px;
+    span:not(.ant-btn-icon, .anticon) {
+      transform: scaleX(0.9);
+    }
+  }
+
+  &__controls {
+    @include default-flex-centered;
+    justify-content: space-between;
+    border-top: 1px solid $color-black-russian;
+    border-bottom: 1px solid $color-black-russian;
+
+    &_left-part {
+      .ant-btn-text {
+        padding: 22px 10px;
+      }
+    }
+
+    &_right-part:before {
+      content: '';
+      border: 1px solid $color-black-russian;
+      align-self: stretch;
+    }
+
+    &_right-part {
+      .ant-btn-text {
+        margin-left: 22px;
+        padding-right: 5px;
+      }
+    }
+  }
+}
