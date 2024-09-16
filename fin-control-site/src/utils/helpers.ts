@@ -6,3 +6,17 @@ export const saveJSONFile = (data:Item[]) =>{
     const blob = new Blob([jsonString], { type: 'application/json' });
     saveAs(blob, 'data.json'); 
 }
+
+export const sortElements = (
+    aItem: Item,
+    bItem: Item,
+    fieldName:string
+) => {
+    const a = aItem[fieldName as keyof Item ];
+    const b = bItem[fieldName as keyof Item ];
+    if (typeof a === 'number' && typeof b === 'number') {
+        return a - b;
+      }
+    return a.toString().localeCompare(b.toString());
+
+}

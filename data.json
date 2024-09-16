@@ -8,7 +8,7 @@
       "size": "50",
       "stock": 0,
       "delivery": 40,
-      "amount": 30
+      "amount": 40
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "size": "52",
       "stock": 6,
       "delivery": 32,
-      "amount": 4
+      "amount": 38
     },
     {
       "id": 3,
@@ -28,17 +28,17 @@
       "size": "50-54",
       "stock": 25,
       "delivery": 50,
-      "amount": 2
+      "amount": 75
     },
     {
       "id": 4,
-      "barcode": 2027611111111,
+      "barcode": 2026611111111,
       "category": "trousers",
       "part_number": "Брюки",
       "size": "58",
       "stock": 18,
       "delivery": 3,
-      "amount": 27
+      "amount": 21
     },
     {
       "id": 5,
@@ -58,7 +58,7 @@
       "size": "42",
       "stock": 46,
       "delivery": 7,
-      "amount": 33
+      "amount": 53
     },
     {
       "id": 7,

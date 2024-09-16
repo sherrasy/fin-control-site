@@ -4,10 +4,6 @@ import MainPage from "@pages/main-page/main-page"
 import { useEffect } from "react";
 
 function App() {
-  const dispatch = useAppDispatch();
-  useEffect(() => {
-    dispatch(fetchItems());
-  }, [dispatch,]);
   return (
     <>
     <MainPage/>
