@@ -1,13 +1,14 @@
-import { Button, Table,  } from 'antd';
 import {
+  CloseOutlined,
   FolderAddFilled,
   ImportOutlined,
-  CloseOutlined,
 } from '@ant-design/icons';
-import { useAppDispatch, useAppSelector } from '@/utils/hooks';
-import { getItems } from '@/store/items-data/selectors';
-import { fetchItems } from '@/store/items-data/actions';
+import { fetchItems } from '@store/items-data/actions';
+import { getItems } from '@store/items-data/selectors';
+import { useAppDispatch, useAppSelector } from '@utils/hooks';
+import { Button, Table, } from 'antd';
 import { columnsData } from './columns-data';
+import TableSummary from './table-summary';
 
 function ItemsTable(): JSX.Element {
   const items = useAppSelector(getItems);
@@ -15,8 +16,6 @@ function ItemsTable(): JSX.Element {
   const handleImportClick = () => {
     dispatch(fetchItems());
   }
-
-
 
   return (
     <div className='table'>
@@ -41,9 +40,11 @@ function ItemsTable(): JSX.Element {
         <Table className='table__items-table'
           pagination={false}
           columns={columnsData}
+          scroll={{ x:1300, y: 400 }}
           dataSource={items ? items : undefined}
           showSorterTooltip={{ target: 'sorter-icon' }}
-
+          summary={()=><Table.Summary fixed='bottom'><TableSummary data={items}/>
+          </Table.Summary>}
         />
       </div>
     </div>

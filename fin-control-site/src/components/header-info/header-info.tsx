@@ -1,6 +1,6 @@
+import { ArrowRightOutlined } from "@ant-design/icons";
 import Avatar from "@assets/avatar.svg?react";
 import Calendar from "@assets/calendar.svg?react";
-import{ArrowRightOutlined} from "@ant-design/icons";
 
 function HeaderInfo(): JSX.Element {
 

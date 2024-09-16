@@ -1,5 +1,5 @@
-import { Item } from "@/types/item.interface";
 import { sortElements } from "@/utils/helpers";
+import { Item } from "@frontend-types/item.interface";
 import { TableColumnsType } from "antd";
 
 export const columnsData: TableColumnsType<Item> = [
@@ -7,6 +7,7 @@ export const columnsData: TableColumnsType<Item> = [
     title: 'Баркод',
     dataIndex: 'barcode',
     key: 'barcode',
+    width:160,
     showSorterTooltip: { target: 'sorter-icon' },
     sorter:(a,b)=>sortElements(a, b, 'barcode')
   },
@@ -14,6 +15,7 @@ export const columnsData: TableColumnsType<Item> = [
     title: 'Предмет',
     dataIndex: 'category',
     key: 'category',
+    width:140,
     showSorterTooltip: { target: 'sorter-icon' },
     sorter:(a,b)=>sortElements(a, b, 'category')
   },
@@ -21,6 +23,7 @@ export const columnsData: TableColumnsType<Item> = [
     title: 'Артикул поставщика',
     dataIndex: 'part_number',
     key: 'part_number',
+    width:220,
     showSorterTooltip: { target: 'sorter-icon' },
     sorter:(a,b)=>sortElements(a, b, "part_number")
   },
@@ -28,6 +31,7 @@ export const columnsData: TableColumnsType<Item> = [
     title: 'Размер',
     dataIndex: 'size',
     key: 'size',
+    width:120,
     showSorterTooltip: { target: 'sorter-icon' },
     sorter:(a,b)=>sortElements(a, b, "size")
   },
@@ -35,6 +39,7 @@ export const columnsData: TableColumnsType<Item> = [
     title: 'Доступно к заказу',
     dataIndex: 'stock',
     key: 'stock',
+    width:200,
     showSorterTooltip: { target: 'sorter-icon' },
     sorter:(a,b)=>sortElements(a, b, 'stock')
   },
@@ -42,6 +47,7 @@ export const columnsData: TableColumnsType<Item> = [
     title: 'Товары в пути',
     dataIndex: 'delivery',
     key: 'delivery',
+    width:200,
     showSorterTooltip: { target: 'sorter-icon' },
     sorter:(a,b)=>sortElements(a, b, 'delivery')
   },

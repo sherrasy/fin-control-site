@@ -1,4 +1,4 @@
-import { defaultCompanyInfo, linkTitles } from "@/utils/constant";
+import { defaultCompanyInfo, linkTitles } from "@utils/constant";
 
 function CompanyInfo(): JSX.Element {
     return (

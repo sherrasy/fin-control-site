@@ -1,9 +1,9 @@
-import { Button, Form, Input, InputNumber, Select } from "antd";
 import { ReadFilled, UploadOutlined } from "@ant-design/icons";
+import { getItems } from "@store/items-data/selectors";
 import { CategoryName } from "@utils/constant";
-import { getItems } from "@/store/items-data/selectors";
-import { useAppSelector } from "@/utils/hooks";
-import { saveJSONFile } from "@/utils/helpers";
+import { saveJSONFile } from "@utils/helpers";
+import { useAppSelector } from "@utils/hooks";
+import { Button, Form, Input, InputNumber, Select } from "antd";
 import { useState } from "react";
 
 function Filters(): JSX.Element {
