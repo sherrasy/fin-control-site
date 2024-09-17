@@ -1,6 +1,6 @@
-import { setCurrentFilters } from "@store/items-data/items-data";
-import { FilterFormValues } from "@frontend-types/filter-form.interface";
 import { ReadFilled, UploadOutlined } from "@ant-design/icons";
+import { FilterFormValues } from "@frontend-types/filter-form.interface";
+import { setCurrentFilters } from "@store/items-data/items-data";
 import { getItems } from "@store/items-data/selectors";
 import { CategoryName } from "@utils/constant";
 import { saveJSONFile } from "@utils/helpers";

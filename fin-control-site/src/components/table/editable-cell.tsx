@@ -1,8 +1,8 @@
-import { Item } from '@/types/item.interface';
+import { Item } from '@frontend-types/item.interface';
 import { updateCurrentItem } from '@store/items-data/items-data';
 import { useAppDispatch } from '@utils/hooks';
-import { Form, InputNumber } from 'antd';
-import React, { useState, useRef } from 'react';
+import { Form, FormInstance, InputNumber } from 'antd';
+import React, { useRef, useState } from 'react';
 
 interface EditableCellProps {
     title: keyof Item;
@@ -18,36 +18,29 @@ const EditableCell: React.FC<React.PropsWithChildren<EditableCellProps>> = ({
     ...restProps
 }) => {
     const [editing, setEditing] = useState(false);
-    const currentValue:number =(record && typeof record[title] === 'number') ? record[title] : 0;
-    const [value, setValue] = useState<number>(currentValue);
-    const inputRef = useRef<HTMLInputElement>(null);
+    const formRef = useRef<FormInstance>(null);
 
     const dispatch = useAppDispatch();
-    const initialValues={
-        [title]:value,
-    }
+    const initialValues = {
+        [title]: record[title],
+    };
+
     const toggleEdit = () => {
         setEditing((prev) => !prev);
-        if (inputRef.current) {
-            inputRef.current.focus();
-        }
     };
+
+    const checkValidity = (value: number | null) =>
+      value !== null && value >= 0 && Number.isInteger(value); 
 
     const handleSave = () => {
-        if (value !== record[title]) {
+        const value = formRef.current?.getFieldsValue()[title];
+        const isValid = checkValidity(value)
+        if (isValid) {
             const newData = { ...record, [title]: value };
             const newAmount = newData.delivery + newData.stock;
-            const data = {...newData, amount: newAmount}
+            const data = { ...newData, amount: newAmount };
             dispatch(updateCurrentItem(data));
-        }
-        toggleEdit();
-    };
-
-    const handleChange = (value:number|null) => {
-        if (value) {
-            setValue(value);
-        } else {
-            setValue(0);
+            toggleEdit();
         }
     };
 
@@ -55,7 +48,8 @@ const EditableCell: React.FC<React.PropsWithChildren<EditableCellProps>> = ({
 
     if (editable) {
         childNode = editing ? (
-            <Form initialValues={initialValues}>
+            <Form initialValues={initialValues}  ref={formRef}
+>
                 <Form.Item
                     name={title}
                     rules={[
@@ -63,18 +57,20 @@ const EditableCell: React.FC<React.PropsWithChildren<EditableCellProps>> = ({
                             required: true,
                             message: `Поле обязательно для заполнения (только цифры).`,
                         },
+                        {
+                            pattern: /^[0-9]*$/,
+                            message: 'Только целые положительные числа',
+                        },
                     ]}
                 >
                     <InputNumber
-                        ref={inputRef}
-                        onChange={handleChange}
                         onPressEnter={handleSave}
                         onBlur={handleSave}
                     />
                 </Form.Item>
             </Form>
         ) : (
-            <div className='editable-cell-value-wrap' onDoubleClick={toggleEdit}>
+            <div className='editable-cell-value-wrap' onDoubleClick={toggleEdit} >
                 {children}
             </div>
         );
