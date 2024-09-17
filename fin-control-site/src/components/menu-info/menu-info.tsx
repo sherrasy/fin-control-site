@@ -1,12 +1,13 @@
+import { CloseOutlined, DownOutlined, EditFilled, FileTextFilled, ReadFilled, SettingFilled } from "@ant-design/icons";
 import { Menu, MenuProps } from 'antd';
 import { useState } from 'react';
-import { DownOutlined,CloseOutlined,SettingFilled,EditFilled, ReadFilled, FileTextFilled  } from "@ant-design/icons";
 
 type MenuItem = Required<MenuProps>['items'][number];
 
 function MenuInfo(): JSX.Element {
   const [isCollapsed, setIsCollapsed] = useState(false); 
-  const items: MenuItem[] = [
+  
+  const menuItems: MenuItem[] = [
     {
       key: 'settings',
       label: 'Настройки',
@@ -44,7 +45,7 @@ function MenuInfo(): JSX.Element {
         </div>
         <button className='menu-info__toggle' onClick={handleClickMenu}>Меню {isCollapsed ? <DownOutlined /> :<CloseOutlined />}</button>
       </div>
-      {!isCollapsed && <Menu className='menu-info__menu' mode='inline' items={items} />}
+      {!isCollapsed && <Menu className='menu-info__menu' mode='inline' items={menuItems} />}
     </div>
   );
 }

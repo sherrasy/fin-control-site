@@ -1,10 +1,28 @@
-export const sortingParams = ['asc', 'desc'];
+  export const REDUCER_NAME = 'ITEMS';
 
-export const FilterName = {
+  export const APP_ACTION = 'fetch-items';
+  
+  export const defaultCompanyInfo = {
+  phone: '8 (999) 999 99 99',
+  email: 'pf1@werthesest.ru',
+  time: 'Пн - Пт с 9:00 до 19:00 мск',
+};
+
+export const linkTitles = [
+  { id: 1, title: 'Пользовательское соглашение' },
+  { id: 2, title: 'Политика конфиденциальности' },
+  { id: 3, title: 'Юридическая информация' },
+  { id: 4, title: 'Публичная оферта' },
+];
+
+export const ColumnIndexName = {
     barcode: 'barcode',
+    category: 'category',
     part_number: 'part_number',
     size: 'size',
-    category: 'category',
+    stock: 'stock',
+    delivery: 'delivery',
+    amount: 'amount',
   } as const;
 
 export const FilterToName = {
@@ -21,3 +39,4 @@ export const CategoryName = {
     jeans: 'Джинсы',
     shoes: 'Обувь',
   } as const;
+

@@ -5,7 +5,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:'/fin-table/',
+  base:'/fin-control-site/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

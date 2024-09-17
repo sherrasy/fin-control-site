@@ -1,5 +1,6 @@
 export interface Item{
     id: number,
+    key: number,
     barcode: number,
     category: string,
     part_number: string,

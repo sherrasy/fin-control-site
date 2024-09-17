@@ -1,17 +1,6 @@
+import { defaultCompanyInfo, linkTitles } from "@utils/constant";
+
 function CompanyInfo(): JSX.Element {
-    const defaultInfo = {
-        phone: '8 (999) 999 99 99',
-        email: 'pf1@werthesest.ru',
-        time: 'Пн - Пт с 9:00 до 19:00 мск',
-    };
-
-    const linkTitles = [
-        { id: 1, title: 'Пользовательское соглашение' },
-        { id: 2, title: 'Политика конфиденциальности' },
-        { id: 3, title: 'Юридическая информация' },
-        { id: 4, title: 'Публичная оферта' },
-    ];
-
     return (
         <div className='company-info'>
             <div className='company-info__contacts-block contacts-block'>
@@ -19,15 +8,15 @@ function CompanyInfo(): JSX.Element {
             <div className='contacts-block__contacts'>
                 <div className="custom-input" >
                     <label>Номер поддержки:</label>
-                    <input defaultValue={defaultInfo.phone} readOnly />
+                    <input defaultValue={defaultCompanyInfo.phone} readOnly />
                 </div>
                 <div className="custom-input">
                     <label>Почта поддержки:</label>
-                    <input defaultValue={defaultInfo.email} readOnly />
+                    <input defaultValue={defaultCompanyInfo.email} readOnly />
                 </div>
             <div className="custom-input input-time">
                 <label>Часы работы:</label>
-                <input defaultValue={defaultInfo.time} readOnly />
+                <input defaultValue={defaultCompanyInfo.time} readOnly />
             </div>
             </div>
             </div>

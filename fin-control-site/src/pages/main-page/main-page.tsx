@@ -3,7 +3,7 @@ import MenuInfo from "@components/menu-info/menu-info";
 import CompanyInfo from "@components/company-info/company-info";
 import ContactButton from "@components/contact-button/contact-button";
 import Filters from "@components/filters/filters";
-import Table from "@/components/table/table";
+import ItemsTable from "@/components/table/table";
 
 function MainPage(): JSX.Element {
 
@@ -20,7 +20,7 @@ function MainPage(): JSX.Element {
           <Filters/>
         </div>
         <div className='main-page__main-section_lower-part'>
-          <Table/>
+          <ItemsTable/>
         </div>
       </div>
     </div>
