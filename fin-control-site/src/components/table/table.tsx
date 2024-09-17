@@ -6,18 +6,27 @@ import { useAppDispatch, useAppSelector } from '@utils/hooks';
 import { Button, Table, } from 'antd';
 import { columnsData } from './columns-data';
 import TableSummary from './table-summary';
+import EditableCell from './editable-cell';
 
 function ItemsTable(): JSX.Element {
   const items = useAppSelector(getFilteredItems);
   const dispatch = useAppDispatch();
-  
+
   const handleImportClick = () => {
     dispatch(fetchItems());
   }
+
   const handleResetClick = () => {
     dispatch(setCurrentFilters(null))
-
   };
+
+  const components = {
+    body: {
+      cell: EditableCell,
+    },
+  };
+  
+
   return (
     <div className='table'>
       <div className='table__controls'>
@@ -41,6 +50,7 @@ function ItemsTable(): JSX.Element {
         <Table className='table__items-table'
           pagination={false}
           columns={columnsData}
+          components={components}
           scroll={{ x: 1300, y: 400 }}
           dataSource={items ? items : undefined}
           showSorterTooltip={{ target: 'sorter-icon' }}

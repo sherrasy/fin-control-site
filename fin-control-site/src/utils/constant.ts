@@ -1,4 +1,8 @@
-export const defaultCompanyInfo = {
+  export const REDUCER_NAME = 'ITEMS';
+
+  export const APP_ACTION = 'fetch-items';
+  
+  export const defaultCompanyInfo = {
   phone: '8 (999) 999 99 99',
   email: 'pf1@werthesest.ru',
   time: 'Пн - Пт с 9:00 до 19:00 мск',
@@ -11,11 +15,14 @@ export const linkTitles = [
   { id: 4, title: 'Публичная оферта' },
 ];
 
-export const FilterName = {
+export const ColumnIndexName = {
     barcode: 'barcode',
+    category: 'category',
     part_number: 'part_number',
     size: 'size',
-    category: 'category',
+    stock: 'stock',
+    delivery: 'delivery',
+    amount: 'amount',
   } as const;
 
 export const FilterToName = {
@@ -33,9 +40,3 @@ export const CategoryName = {
     shoes: 'Обувь',
   } as const;
 
-  export const REDUCER_NAME = 'ITEMS'
-
-  export const ApiActionName = {
-    FetchItems: 'fetch-items',
-    EditItem: 'edit-item',
-  } as const;
