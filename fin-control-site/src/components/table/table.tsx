@@ -1,22 +1,23 @@
-import {
-  CloseOutlined,
-  FolderAddFilled,
-  ImportOutlined,
-} from '@ant-design/icons';
+import {  CloseOutlined, FolderAddFilled, ImportOutlined} from '@ant-design/icons';
 import { fetchItems } from '@store/items-data/actions';
-import { getItems } from '@store/items-data/selectors';
+import { setCurrentFilters } from '@store/items-data/items-data';
+import { getFilteredItems } from '@store/items-data/selectors';
 import { useAppDispatch, useAppSelector } from '@utils/hooks';
 import { Button, Table, } from 'antd';
 import { columnsData } from './columns-data';
 import TableSummary from './table-summary';
 
 function ItemsTable(): JSX.Element {
-  const items = useAppSelector(getItems);
+  const items = useAppSelector(getFilteredItems);
   const dispatch = useAppDispatch();
+  
   const handleImportClick = () => {
     dispatch(fetchItems());
   }
+  const handleResetClick = () => {
+    dispatch(setCurrentFilters(null))
 
+  };
   return (
     <div className='table'>
       <div className='table__controls'>
@@ -30,7 +31,7 @@ function ItemsTable(): JSX.Element {
           </Button>
         </div>
         <div className='table__controls_right-part'>
-          <Button type='text' iconPosition='end' icon={<CloseOutlined />}>
+          <Button type='text' iconPosition='end' icon={<CloseOutlined />} onClick={handleResetClick}>
             {' '}
             Очистить
           </Button>
@@ -40,10 +41,10 @@ function ItemsTable(): JSX.Element {
         <Table className='table__items-table'
           pagination={false}
           columns={columnsData}
-          scroll={{ x:1300, y: 400 }}
+          scroll={{ x: 1300, y: 400 }}
           dataSource={items ? items : undefined}
           showSorterTooltip={{ target: 'sorter-icon' }}
-          summary={()=><Table.Summary fixed='bottom'><TableSummary data={items}/>
+          summary={() => <Table.Summary fixed='bottom'><TableSummary data={items} />
           </Table.Summary>}
         />
       </div>
