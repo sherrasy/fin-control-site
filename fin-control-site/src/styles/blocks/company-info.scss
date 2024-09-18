@@ -72,3 +72,18 @@
     }
   }
 }
+
+@media screen and (max-width: 1023px) {
+  .company-info {
+    width: 200px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .company-info {
+    width: 330px;
+  }
+}
