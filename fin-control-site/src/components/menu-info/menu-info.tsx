@@ -45,7 +45,7 @@ function MenuInfo(): JSX.Element {
         </div>
         <button className='menu-info__toggle' onClick={handleClickMenu}>Меню {isCollapsed ? <DownOutlined /> :<CloseOutlined />}</button>
       </div>
-      {!isCollapsed && <Menu className='menu-info__menu' mode='inline' items={menuItems} />}
+      {!isCollapsed && <Menu theme="dark" className='menu-info__menu' mode='inline' items={menuItems} />}
     </div>
   );
 }

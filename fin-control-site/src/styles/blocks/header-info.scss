@@ -1,5 +1,7 @@
 .header-info {
   @include default-flex-centered;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   height: 60px;
   padding: 10px 15px 10px 30px;

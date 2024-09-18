@@ -17,6 +17,9 @@ const EditableCell: React.FC<React.PropsWithChildren<EditableCellProps>> = ({
     children,
     ...restProps
 }) => {
+    if(!record){
+        return <td {...restProps}>{children}</td>;;
+    }
     const [editing, setEditing] = useState(false);
     const formRef = useRef<FormInstance>(null);
 
